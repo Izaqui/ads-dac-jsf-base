@@ -12,12 +12,14 @@ public class Livro {
     private long id;
     private String titulo;
     private LocalDate dataDeLancamento;
+    //conversores e validadores
+    private float preco;
+    private Editora editora;
 
-    
-    public Livro(String titulo,LocalDate dataDeLancamento) {
+    public Livro(){}
+    public Livro(String titulo, LocalDate dataDeLancamento) {
         this(0,titulo,dataDeLancamento);
     }
-
     public Livro(long id,String titulo,LocalDate dataDeLancamento) {
         this.id = id;
         this.titulo = titulo;
@@ -26,39 +28,42 @@ public class Livro {
     public String titulo(){
         return this.titulo;
     }
+    public LocalDate dataLancamento() {
+        return this.dataDeLancamento;
+    }
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public LocalDate getDataDeLancamento() {
+        return dataDeLancamento;
+    }
+    public void setDataDeLancamento(LocalDate dataDeLancamento) {
+        this.dataDeLancamento = dataDeLancamento;
+    }
+    public float getPreco() {
+        return preco;
+    }
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+    public Editora getEditora() {
+        return editora;
+    }
+    public void setEditora(Editora editora) {
+        this.editora = editora;
+    }
 
     @Override
     public String toString() {
         return "Livro{" + "id=" + id + ", titulo=" + titulo + ", dataDeLancamento=" + dataDeLancamento + '}';
     }
-
-    public LocalDate dataLancamento() {
-        return this.dataDeLancamento;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public LocalDate getDataDeLancamento() {
-        return dataDeLancamento;
-    }
-
-    public void setDataDeLancamento(LocalDate dataDeLancamento) {
-        this.dataDeLancamento = dataDeLancamento;
-    }
-    
-
 }
