@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: job
+  Date: 03/05/22
+  Time: 09:25
+-->
 <!DOCTYPE html
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,29 +16,17 @@
     <title>Title</title>
 </h:head>
 
-
 <h:body>
-    <h:form>
-        <h:outputLabel value="Local de Origem:" for="localDeOrigem"/>
-        <h:inputText id="localDeOrigem" value="#{controladorDeEditoras.editora.localDeOrigem}" required="true"/><br/>
-        <h:outputLabel value="Nome Fantasia:" for="nomeFantasia"/>
-        <h:inputText id="nomeFantasia" value="#{controladorDeEditoras.editora.nomeFantasia}" /><br/>
-        <h:commandButton value="+" action="#{controladorDeEditoras.salvar()}"/><br/>
-    </h:form>
-    <h:outputText value="#{controladorDeEditoras.editora.localDeOrigem}"/>
-
-    <!-- form method="POST" action="editoras.criar.do">-->
-    <!--            <label>Local de Origem:-->
-    <!--                <input type="text" id="localDeOrigem" name="localDeOrigem"/>-->
-    <!--            </label>-->
-    <!--            <label>Nome Fantasia:-->
-    <!--                <input type="text" id="nomeFantasia" name="nomeFantasia"/>-->
-    <!--            </label>-->
-    <!--            <input type="submit" value="+" />-->
-    <!--        </form>-->
-
-    <!--        <br/>-->
-    <!--        <a href="editoras.do">listagem de editoras</a>-->
+    <div align="center">
+        <h:form>
+            <h:outputLabel value="Local de Origem:" for="localDeOrigem"/>
+            <h:inputText id="localDeOrigem" value="#{controladorDeEditoras.editora.localDeOrigem}" required="true"/><br/>
+            <h:outputLabel value="Nome Fantasia:" for="nomeFantasia"/>
+            <h:inputText id="nomeFantasia" value="#{controladorDeEditoras.editora.nomeFantasia}" /><br/>
+            <h:commandButton value="+" action="#{controladorDeEditoras.salvar()}"/><br/>
+        </h:form>
+        <h:outputText value="#{controladorDeEditoras.editora.localDeOrigem}"/>
+    </div>
 </h:body>
 
 </html>
