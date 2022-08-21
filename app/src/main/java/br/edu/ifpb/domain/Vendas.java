@@ -49,6 +49,6 @@ public class Vendas {
         return codigo;
     }
 
-    
+
 
 }

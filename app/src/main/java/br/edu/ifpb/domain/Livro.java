@@ -25,6 +25,11 @@ public class Livro {
         this.titulo = titulo;
         this.dataDeLancamento = dataDeLancamento;
     }
+
+    public Livro() {
+
+    }
+
     public String titulo(){
         return this.titulo;
     }
