@@ -1,5 +1,8 @@
 package br.edu.ifpb.domain;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +25,8 @@ public class Vendas {
     private Vendas(String codigo){
         this.codigo = codigo;
     }
-    public static Vendas vazio() {
+    @Contract(value = " -> new", pure = true)
+    public static @NotNull Vendas vazio() {
         return new Vendas("vazio");
     }
 
@@ -39,5 +43,12 @@ public class Vendas {
         this.status = StatusVenda.FINALIZADO;
         this.dataVenda = LocalDate.now();
     }
+
+    public Object getCodigo() {
+        this.codigo = codigo;
+        return codigo;
+    }
+
+    
 
 }
