@@ -16,7 +16,7 @@ public class Livro {
     private float preco;
     private Editora editora;
 
-    public Livro(){}
+    public Livro(int i, String titulo, LocalDate dataDeLancamento, String capa){}
     public Livro(String titulo, LocalDate dataDeLancamento) {
         this(0,titulo,dataDeLancamento);
     }

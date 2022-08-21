@@ -35,7 +35,7 @@ public class LivrosEmJDBC implements Livros {
     }
 
     @Override
-    public void criar(Livro livro) {
+    public Livro criar(Livro livro) {
         try {
             PreparedStatement statement = connection.prepareStatement(
                 "INSERT INTO livros(titulo, dataDeLancamento) VALUES ( ?, ? );"
@@ -49,6 +49,7 @@ public class LivrosEmJDBC implements Livros {
             Logger.getLogger(LivrosEmJDBC.class.getName()).log(Level.SEVERE,null,ex);
         }
 
+        return livro;
     }
 
     @Override

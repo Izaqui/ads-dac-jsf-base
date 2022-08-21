@@ -25,8 +25,9 @@ public class LivrosEmMemoria implements Livros{
     }
 
     @Override
-    public void criar(Livro livro) {
-        
+    public Livro criar(Livro livro) {
+
+        return livro;
     }
 
 }

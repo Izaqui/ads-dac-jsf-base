@@ -11,5 +11,11 @@ public interface Livros {
 
     public List<Livro> todos();
     
-    public void criar(Livro livro);
+    public Livro criar(Livro livro);
+
+    Livro buscarId(long id);
+
+    Livro atualizar(long id, Livro livro);
+
+    boolean remover(long id);
 }
