@@ -53,6 +53,21 @@ public class LivrosEmJDBC implements Livros {
     }
 
     @Override
+    public Livro buscarId(long id) {
+        return null;
+    }
+
+    @Override
+    public Livro atualizar(long id, Livro livro) {
+        return null;
+    }
+
+    @Override
+    public boolean remover(long id) {
+        return false;
+    }
+
+    @Override
     public List<Livro> todos() {
         try {
             List<Livro> lista = new ArrayList<>();

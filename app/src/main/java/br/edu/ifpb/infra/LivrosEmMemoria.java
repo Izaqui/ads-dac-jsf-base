@@ -30,4 +30,19 @@ public class LivrosEmMemoria implements Livros{
         return livro;
     }
 
+    @Override
+    public Livro buscarId(long id) {
+        return null;
+    }
+
+    @Override
+    public Livro atualizar(long id, Livro livro) {
+        return null;
+    }
+
+    @Override
+    public boolean remover(long id) {
+        return false;
+    }
+
 }
