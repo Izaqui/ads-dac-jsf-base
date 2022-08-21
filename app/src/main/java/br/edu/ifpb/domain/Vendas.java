@@ -1,6 +1,43 @@
 package br.edu.ifpb.domain;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 public class Vendas {
-    private Livro livro;
+    private List<Livro> livros;
+    private String codigo;
+    private StatusVenda status;
+
+    private LocalDate dataVenda;
+    private String cpf;
+
+    public Vendas() {
+        this.livros = new ArrayList<>();
+        this.codigo = UUID.randomUUID().toString();
+        this.status = StatusVenda.CRIADO;
+        this.cpf = cpf;
+    }
+    private Vendas(String codigo){
+        this.codigo = codigo;
+    }
+    public static Vendas vazio() {
+        return new Vendas("vazio");
+    }
+
+    public void incluirCliente(String cpf){
+        this.cpf = cpf;
+    }
+    public void adicionarLivro(Livro livro){
+        this.livros.add(livro);
+    }
+    public void cancelar(){
+        this.status = StatusVenda.CANCELADO;
+    }
+    public void finalizar(){
+        this.status = StatusVenda.FINALIZADO;
+        this.dataVenda = LocalDate.now();
+    }
 
 }
