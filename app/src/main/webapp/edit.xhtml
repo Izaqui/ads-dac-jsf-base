@@ -32,7 +32,12 @@
             </h:inputText>
             <h:message for="titulo"/>
         </div>
-
+        <div>
+            <h:selectOneMenu value = "#{userData.data}">
+                <f:selectItem itemValue = "1" itemLabel = "Item 1" />
+                <f:selectItem itemValue = "2" itemLabel = "Item 2" />
+            </h:selectOneMenu>
+        </div>
 
         <div class="line">
             <div class="input-area">
